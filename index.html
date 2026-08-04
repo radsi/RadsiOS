@@ -6,98 +6,75 @@
     <title>RadsiOS</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-
-  <body
-    class="h-screen overflow-hidden bg-cover bg-center select-none"
-    style="
-      background-image: url(&quot;https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=1920&auto=format&fit=crop&quot;);
-    "
-  >
-    <main class="h-full w-full p-6">
-      <div class="flex flex-col gap-6 w-fit">
-        <div class="flex flex-col items-center text-white cursor-pointer">
-          <div
-            class="w-16 h-16 rounded-xl bg-white/20 backdrop-blur flex items-center justify-center text-3xl hover:bg-white/30 transition"
-          >
-            🗂️
-          </div>
-          <span class="mt-2 text-sm">Archivos</span>
-        </div>
-
-        <div class="flex flex-col items-center text-white cursor-pointer">
-          <div
-            class="w-16 h-16 rounded-xl bg-white/20 backdrop-blur flex items-center justify-center text-3xl hover:bg-white/30 transition"
-          >
-            🌐
-          </div>
-          <span class="mt-2 text-sm">Navegador</span>
-        </div>
-
-        <div class="flex flex-col items-center text-white cursor-pointer">
-          <div
-            class="w-16 h-16 rounded-xl bg-white/20 backdrop-blur flex items-center justify-center text-3xl hover:bg-white/30 transition"
-          >
-            ⚙️
-          </div>
-          <span class="mt-2 text-sm">Configuración</span>
-        </div>
-      </div>
-    </main>
-
-    <footer
-      class="absolute bottom-0 left-0 right-0 h-14 bg-black/40 backdrop-blur-md border-t border-white/10 flex items-center justify-between px-4"
-    >
-      <div class="flex items-center gap-3">
-        <button
-          class="w-10 h-10 rounded-lg bg-blue-600 hover:bg-blue-700 transition text-white text-xl"
-        >
-          ⊞
-        </button>
-
-        <button
-          class="w-10 h-10 rounded-lg hover:bg-white/20 transition text-xl"
-        >
-          🌐
-        </button>
-
-        <button
-          class="w-10 h-10 rounded-lg hover:bg-white/20 transition text-xl"
-        >
-          📁
-        </button>
-
-        <button
-          class="w-10 h-10 rounded-lg hover:bg-white/20 transition text-xl"
-        >
-          🎵
-        </button>
-      </div>
-
-      <div class="text-white text-sm font-medium text-right">
-        <div id="clock">00:00</div>
-        <div id="date" class="text-xs opacity-80"></div>
-      </div>
-    </footer>
-
-    <script>
-      function updateClock() {
-        const now = new Date();
-
-        document.getElementById("clock").textContent = now.toLocaleTimeString(
-          "es-ES",
-          {
-            hour: "2-digit",
-            minute: "2-digit",
-          },
-        );
-
-        document.getElementById("date").textContent =
-          now.toLocaleDateString("es-ES");
+    <style>
+      :root {
+        color-scheme: dark;
+        --ui-text-color: #ffffff;
       }
 
-      updateClock();
-      setInterval(updateClock, 1000);
-    </script>
+      body {
+        color: var(--ui-text-color);
+      }
+
+      body[data-contrast="light"] {
+        --ui-text-color: #111111;
+      }
+
+      body[data-contrast="dark"] {
+        --ui-text-color: #ffffff;
+      }
+
+      body[data-contrast="light"] .text-white,
+      body[data-contrast="light"] .text-gray-100,
+      body[data-contrast="light"] .text-gray-200,
+      body[data-contrast="light"] .text-gray-300 {
+        color: #111111 !important;
+      }
+
+      body[data-contrast="dark"] .text-black,
+      body[data-contrast="dark"] .text-gray-900,
+      body[data-contrast="dark"] .text-gray-800,
+      body[data-contrast="dark"] .text-gray-700 {
+        color: #ffffff !important;
+      }
+
+      .bg-white,
+      .bg-gray-50,
+      .bg-gray-100,
+      .bg-gray-200,
+      .bg-slate-50,
+      .bg-zinc-50 {
+        color: #111111;
+      }
+
+      .bg-slate-900,
+      .bg-slate-800,
+      .bg-slate-700,
+      .bg-slate-950,
+      .bg-gray-900,
+      .bg-gray-800,
+      .bg-black,
+      .bg-blue-600,
+      .bg-blue-700,
+      .bg-green-700 {
+        color: #ffffff;
+      }
+
+      .window #app-content {
+        color: inherit;
+      }
+    </style>
+  </head>
+
+  <body class="overflow-hidden bg-slate-900 text-white">
+    <div id="wallpaper"></div>
+
+    <div id="desktop"></div>
+
+    <div id="startmenu"></div>
+
+    <div id="taskbar"></div>
+
+    <script type="module" src="scripts/main.js"></script>
   </body>
 </html>

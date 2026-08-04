@@ -1,0 +1,37 @@
+<div
+  class="flex h-full w-full flex-col overflow-hidden rounded-lg bg-white text-black"
+>
+  <div
+    class="flex flex-none items-center gap-2 border-b border-gray-200 bg-gray-50 p-3"
+  >
+    <button
+      id="back"
+      class="rounded bg-gray-200 px-3 py-2 transition hover:bg-gray-300"
+    >
+      ←
+    </button>
+
+    <input
+      id="url"
+      class="flex-1 rounded border border-gray-300 px-3 py-2 outline-none focus:border-blue-500"
+      placeholder="URL..."
+      value="https://youtu.be/85o8gFOZgNU"
+    />
+
+    <button
+      id="go"
+      class="rounded bg-blue-500 px-4 py-2 font-medium text-white transition hover:bg-blue-600"
+    >
+      Go
+    </button>
+  </div>
+
+  <div class="min-h-0 flex-1 overflow-x-auto overflow-y-hidden bg-gray-50">
+    <iframe
+      id="viewer"
+      class="block h-full min-h-full min-w-[960px] w-full border-0"
+      frameborder="0"
+      loading="lazy"
+    ></iframe>
+  </div>
+</div>

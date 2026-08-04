@@ -1,0 +1,77 @@
+<div class="h-full w-full overflow-auto p-4 text-black">
+  <div class="mx-auto flex max-w-4xl flex-col gap-4">
+    <div class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+      <h2 class="text-lg font-semibold">Wallpaper</h2>
+      <p class="mt-1 text-sm text-gray-600">
+        Elige uno de los fondos predeterminados o sube una imagen personalizada.
+      </p>
+    </div>
+
+    <div class="grid gap-3 md:grid-cols-2">
+      <button
+        class="wallpaper-option rounded-2xl border border-gray-200 bg-white p-3 text-left shadow-sm transition hover:border-blue-400 hover:shadow"
+        data-wallpaper="assets/wallpaper.jpg"
+      >
+        <div
+          class="h-28 rounded-xl bg-cover bg-center"
+          style="background-image: url(&quot;assets/wallpaper.jpg&quot;)"
+        ></div>
+        <span class="mt-2 block font-medium">White</span>
+      </button>
+
+      <button
+        class="wallpaper-option rounded-2xl border border-gray-200 bg-white p-3 text-left shadow-sm transition hover:border-blue-400 hover:shadow"
+        data-wallpaper="assets/cosmos.jpg"
+      >
+        <div
+          class="h-28 rounded-xl bg-cover bg-center"
+          style="background-image: url(&quot;assets/cosmos.jpg&quot;)"
+        ></div>
+        <span class="mt-2 block font-medium">Cosmos</span>
+      </button>
+
+      <button
+        class="wallpaper-option rounded-2xl border border-gray-200 bg-white p-3 text-left shadow-sm transition hover:border-blue-400 hover:shadow"
+        data-wallpaper="assets/black.jpg"
+      >
+        <div
+          class="h-28 rounded-xl bg-cover bg-center"
+          style="background-image: url(&quot;assets/black.jpg&quot;)"
+        ></div>
+        <span class="mt-2 block font-medium">Black</span>
+      </button>
+
+      <button
+        class="wallpaper-option rounded-2xl border border-gray-200 bg-white p-3 text-left shadow-sm transition hover:border-blue-400 hover:shadow"
+        data-wallpaper="assets/tetris.jpg"
+      >
+        <div
+          class="h-28 rounded-xl bg-cover bg-center"
+          style="background-image: url(&quot;assets/tetris.jpg&quot;)"
+        ></div>
+        <span class="mt-2 block font-medium">Tetris</span>
+      </button>
+    </div>
+
+    <div
+      class="rounded-2xl border border-dashed border-gray-300 bg-gray-50 p-4"
+    >
+      <label
+        for="wallpaper-upload"
+        class="block cursor-pointer text-sm font-medium text-gray-700"
+      >
+        Arrastra o haz clic para subir una imagen personalizada
+      </label>
+      <input
+        id="wallpaper-upload"
+        type="file"
+        accept="image/*"
+        class="mt-3 block w-full text-sm text-gray-600"
+      />
+      <div
+        id="wallpaper-preview"
+        class="mt-3 hidden h-28 rounded-xl bg-cover bg-center"
+      ></div>
+    </div>
+  </div>
+</div>
