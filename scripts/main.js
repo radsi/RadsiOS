@@ -1,7 +1,7 @@
-import { loadComponent } from "./componentLoader.js";
-import { startClock } from "./clock.js";
-import { initDesktop } from "./desktop.js";
-import { initContextMenu } from "./contextMenu.js";
+import { loadComponent } from "scripts/componentLoader.js";
+import { startClock } from "scripts/clock.js";
+import { initDesktop } from "scripts/desktop.js";
+import { initContextMenu } from "scripts/contextMenu.js";
 
 async function init() {
   await Promise.all([
