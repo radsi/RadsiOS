@@ -2,7 +2,7 @@
 
 A minimalist webOS.
 
-<img width="1895" height="928" alt="Captura de pantalla 2026-08-04 220128" src="https://github.com/user-attachments/assets/88e70a4a-f2e4-40ff-9fa0-a03b1d0b42f4" />
+<img width="1903" height="941" alt="Captura de pantalla 2026-08-18 152801" src="https://github.com/user-attachments/assets/19ffa2b3-d236-4eed-9d8c-35a4abafdf0a" />
 
 Explorer:
 Security app container, in case you remove your access to the apps. x)
