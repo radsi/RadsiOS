@@ -1,22 +1,26 @@
-<div class="h-full w-full overflow-auto p-4 text-black">
+<div class="h-full w-full overflow-auto p-4">
   <div class="mx-auto flex max-w-4xl flex-col gap-4">
     <div class="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
-      <h2 class="text-lg font-semibold">Wallpaper</h2>
-      <p class="mt-1 text-sm text-gray-600">
-        Choose one of the default wallpapers or upload a custom image.
+      <h2 class="text-lg font-semibold">
+        <span class="">Wallpaper</span>
+      </h2>
+      <p class="mt-1 text-sm text-gray-600 text-black">
+        <span class=""
+          >Choose one of the default wallpapers or upload a custom image.</span
+        >
       </p>
     </div>
 
     <div class="grid gap-3 md:grid-cols-2">
       <button
         class="wallpaper-option rounded-2xl border border-gray-200 bg-white p-3 text-left shadow-sm transition hover:border-blue-400 hover:shadow"
-        data-wallpaper="assets/wallpaper.jpg"
+        data-wallpaper="assets/wallpaper_.png"
       >
         <div
           class="h-28 rounded-xl bg-cover bg-center"
-          style="background-image: url(&quot;assets/wallpaper.jpg&quot;)"
+          style="background-image: url(&quot;assets/wallpaper_.png&quot;)"
         ></div>
-        <span class="mt-2 block font-medium">White</span>
+        <span class="mt-2 block font-medium">Default</span>
       </button>
 
       <button
@@ -60,7 +64,9 @@
         for="wallpaper-upload"
         class="block cursor-pointer text-sm font-medium text-gray-700"
       >
-        Drop or select an image to upload a custom wallpaper
+        <span class=""
+          >Drop or select an image to upload a custom wallpaper</span
+        >
       </label>
       <input
         id="wallpaper-upload"

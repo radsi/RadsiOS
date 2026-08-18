@@ -117,7 +117,7 @@ function createFileIcon(file) {
       w-16
       h-16
       rounded-xl
-      bg-gray-200
+      bg-gray-800
       flex
       items-center
       justify-center
@@ -125,11 +125,11 @@ function createFileIcon(file) {
       shadow
       "
     >
-      📄
+      <img src="../assets/file.png" />
     </div>
 
 
-    <span class="mt-2 text-sm font-medium">
+    <span class=" mt-2 text-sm font-medium paint-text">
       ${file.name}
     </span>
     `;

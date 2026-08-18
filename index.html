@@ -6,58 +6,34 @@
     <title>RadsiOS</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/opentype.js@1.3.4/dist/opentype.min.js"></script>
     <style>
-      :root {
-        color-scheme: dark;
-        --ui-text-color: #ffffff;
+      @font-face {
+        font-family: "Pizza Tower";
+        src: url("assets/Pizza Tower.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      .paint-text {
+        text-shadow: 0.5px 0.5px 0 #000;
       }
 
       body {
-        color: var(--ui-text-color);
-      }
-
-      body[data-contrast="light"] {
-        --ui-text-color: #111111;
-      }
-
-      body[data-contrast="dark"] {
-        --ui-text-color: #ffffff;
-      }
-
-      body[data-contrast="light"] .text-white,
-      body[data-contrast="light"] .text-gray-100,
-      body[data-contrast="light"] .text-gray-200,
-      body[data-contrast="light"] .text-gray-300 {
-        color: #111111 !important;
-      }
-
-      body[data-contrast="dark"] .text-black,
-      body[data-contrast="dark"] .text-gray-900,
-      body[data-contrast="dark"] .text-gray-800,
-      body[data-contrast="dark"] .text-gray-700 {
-        color: #ffffff !important;
-      }
-
-      .bg-white,
-      .bg-gray-50,
-      .bg-gray-100,
-      .bg-gray-200,
-      .bg-slate-50,
-      .bg-zinc-50 {
-        color: #111111;
-      }
-
-      .bg-slate-900,
-      .bg-slate-800,
-      .bg-slate-700,
-      .bg-slate-950,
-      .bg-gray-900,
-      .bg-gray-800,
-      .bg-black,
-      .bg-blue-600,
-      .bg-blue-700,
-      .bg-green-700 {
-        color: #ffffff;
+        font-family:
+          "Pizza Tower",
+          Inter,
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          "Helvetica Neue",
+          Arial,
+          "Noto Sans",
+          "Apple Color Emoji",
+          "Segoe UI Emoji",
+          "Segoe UI Symbol";
       }
 
       .window #app-content {
@@ -71,10 +47,9 @@
 
     <div id="desktop"></div>
 
-    <div id="startmenu"></div>
-
     <div id="taskbar"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/opentype.js@1.3.4/dist/opentype.min.js"></script>
     <script type="module" src="scripts/main.js"></script>
   </body>
 </html>

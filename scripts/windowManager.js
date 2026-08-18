@@ -68,7 +68,7 @@ export async function openWindow(app, file = null) {
         fixed
         flex
         flex-col
-        bg-gray-900
+        bg-gray-600
         rounded-xl
         shadow-2xl
         overflow-hidden
@@ -110,17 +110,17 @@ export async function openWindow(app, file = null) {
         cursor-move
     ">
 
-        <span class="font-semibold">
+        <span class="font-semibold paint-text">
             ${getWindowTitle(app, file)}
         </span>
 
         <div class="flex items-center gap-2">
             <button class="minimize w-8 h-8 rounded-full hover:bg-gray-300">
-                —
+                <img src="../assets/min.png" />
             </button>
 
             <button class="close w-8 h-8 rounded-full hover:bg-red-500 hover:text-white">
-                ✕
+                <img src="../assets/close.png" />
             </button>
         </div>
 

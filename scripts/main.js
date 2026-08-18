@@ -8,7 +8,6 @@ async function init() {
     loadComponent("wallpaper", "components/wallpaper.html"),
     loadComponent("desktop", "components/desktop.html"),
     loadComponent("taskbar", "components/taskbar.html"),
-    loadComponent("startmenu", "components/startmenu.html"),
   ]);
 
   startClock();
