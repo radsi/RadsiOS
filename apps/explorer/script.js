@@ -1,4 +1,4 @@
-import { openWindow } from "scripts/windowManager.js";
+import { openWindow } from "../scripts/windowManager.js";
 
 const apps = [
   { id: "explorer", icon: "assets/directory.png", label: "Explorer" },
