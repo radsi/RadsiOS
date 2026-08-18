@@ -4,23 +4,22 @@ A minimalist webOS.
 
 <img width="1895" height="928" alt="Captura de pantalla 2026-08-04 220128" src="https://github.com/user-attachments/assets/88e70a4a-f2e4-40ff-9fa0-a03b1d0b42f4" />
 
-
-📂 **Explorer**:
+Explorer:
 Security app container, in case you remove your access to the apps. x)
 
-🌐 **Browser**:
+Browser:
 A simple iframe that lets you access to some webs/youtube videos.
 
-📝 **Notepad**:
+Notepad:
 Small text editor. You can save .txt files (if you reload they will dissappear).
 
-☁️ **Weather**:
+Weather:
 Direct link that opens the webOS browser with a weather website.
 
-🖼️ **Wallpaper**:
+Wallpaper:
 You can customize your desktop background.
 
-🐍 **Snake**:
+Snake:
 Classic snake game made with emojis.
 
 ---
@@ -30,7 +29,7 @@ Classic snake game made with emojis.
 1. Clone this repo.
 
 ```bash
-git clone https://github.com/usuario/minios.git
+git clone https://github.com/radsi/RadsiOS.git
 ```
 
 2. Open up the project.
