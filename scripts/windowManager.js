@@ -187,7 +187,8 @@ export async function openWindow(app, file = null) {
 
   const container = win.querySelector("#app-content");
 
-  const module = await import(`apps/${app}/script.js`);
+  const moduleUrl = new URL(`../apps/${app}/script.js`, import.meta.url);
+  const module = await import(moduleUrl.href);
   const init = module.initScript;
 
   if (typeof init === "function") {
