@@ -116,11 +116,11 @@ export async function openWindow(app, file = null) {
 
         <div class="flex items-center gap-2">
             <button class="minimize w-8 h-8 rounded-full hover:bg-gray-300">
-                <img src="../assets/min.png" />
+                <img src="./assets/min.png" />
             </button>
 
             <button class="close w-8 h-8 rounded-full hover:bg-red-500 hover:text-white">
-                <img src="../assets/close.png" />
+                <img src="./assets/close.png" />
             </button>
         </div>
 
@@ -131,7 +131,7 @@ export async function openWindow(app, file = null) {
         id="app-content"
         class="flex-1 min-h-0 w-full overflow-auto p-4"
     >
-        Cargando...
+        Loading...
     </div>
 
 

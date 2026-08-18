@@ -125,7 +125,7 @@ function createFileIcon(file) {
       shadow
       "
     >
-      <img src="../assets/file.png" />
+      <img src="./assets/file.png" />
     </div>
 
 
