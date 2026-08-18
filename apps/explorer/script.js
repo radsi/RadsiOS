@@ -1,11 +1,11 @@
-import { openWindow } from "../scripts/windowManager.js";
+import { openWindow } from "scripts/windowManager.js";
 
 const apps = [
-  { id: "explorer", icon: "./assets/directory.png", label: "Explorer" },
-  { id: "browser", icon: "./assets/explorer.png", label: "Browser" },
-  { id: "notepad", icon: "./assets/notepad.png", label: "Notepad" },
-  { id: "weather", icon: "./assets/weather.png", label: "Weather" },
-  { id: "snake", icon: "./assets/snake.png", label: "Snake" },
+  { id: "explorer", icon: "assets/directory.png", label: "Explorer" },
+  { id: "browser", icon: "assets/explorer.png", label: "Browser" },
+  { id: "notepad", icon: "assets/notepad.png", label: "Notepad" },
+  { id: "weather", icon: "assets/weather.png", label: "Weather" },
+  { id: "snake", icon: "assets/snake.png", label: "Snake" },
 ];
 
 export function initScript(container) {
