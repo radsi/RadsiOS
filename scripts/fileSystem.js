@@ -6,23 +6,31 @@ export function getFiles() {
 }
 
 export function saveFile(name, content) {
-  const currentFiles = getFiles();
-  const existingIndex = currentFiles.findIndex((file) => file.name === name);
+  const existingIndex = files.findIndex((file) => file.name === name);
 
   let created = false;
 
   if (existingIndex >= 0) {
-    currentFiles[existingIndex].content = content;
+    files[existingIndex] = {
+      ...files[existingIndex],
+      content,
+    };
   } else {
-    currentFiles.push({
+    files.push({
       name,
       content,
     });
 
     created = true;
-  }
 
-  files = currentFiles;
+    window.dispatchEvent(
+      new CustomEvent("fileCreated", {
+        detail: {
+          name,
+        },
+      }),
+    );
+  }
 
   return {
     created,
@@ -34,9 +42,23 @@ export function saveFile(name, content) {
 }
 
 export function deleteFile(name) {
-  files = getFiles().filter((f) => f.name !== name);
+  const exists = files.some((file) => file.name === name);
+
+  if (!exists) return false;
+
+  files = files.filter((file) => file.name !== name);
+
+  window.dispatchEvent(
+    new CustomEvent("fileDeleted", {
+      detail: {
+        name,
+      },
+    }),
+  );
+
+  return true;
 }
 
 export function getFile(name) {
-  return getFiles().find((file) => file.name === name);
+  return files.find((file) => file.name === name);
 }

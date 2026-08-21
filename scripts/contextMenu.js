@@ -1,3 +1,5 @@
+import { deleteFile } from "./fileSystem.js";
+
 export function initContextMenu() {
   const menu = document.createElement("div");
 
@@ -145,12 +147,14 @@ function showDeleteModal(element) {
   };
 
   modal.querySelector("#confirm").onclick = () => {
-    element.remove();
+    const fileName = element.dataset.file;
+
+    if (fileName) {
+      deleteFile(fileName);
+    } else {
+      element.remove();
+    }
 
     modal.remove();
-
-    if (element.dataset.file) {
-      deleteFile(element.dataset.file);
-    }
   };
 }
