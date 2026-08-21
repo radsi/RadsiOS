@@ -226,14 +226,12 @@ function createStartMenu() {
     w-[380px]
     overflow-hidden
     rounded-2xl
-    border
-    border-gray-300
     bg-gray-600
     shadow-2xl
   `;
 
   menu.innerHTML = `
-    <div class="border-b border-gray-200 p-4">
+    <div class=" p-4">
       <div class="relative">
         <input
           id="start-search"
